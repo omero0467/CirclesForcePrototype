@@ -75,7 +75,6 @@ async function draw () {
             .join('circle')
             .attr('r', (d,i)=>sizeScale(d.length)*0.1)
             .transition()
-            // .attr('cx',(d,i)=>sizeScale(i))
             .attr('cx', (d,i)=>xScale(xAccessor(d,i)))
             .attr('cy',(d,i)=>yScale(yAccessor(i)))
             .attr('fill',(d,i)=>d3.interpolatePurples(i/dataset.length-1))
