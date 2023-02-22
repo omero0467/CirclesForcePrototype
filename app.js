@@ -57,7 +57,6 @@ async function draw () {
         
         //Fire Change And Join data
 
-        
             let newData;
             d3.select('#group')
             .on('change',function(event){
@@ -79,7 +78,7 @@ async function draw () {
             // .attr('cx',(d,i)=>sizeScale(i))
             .attr('cx', (d,i)=>xScale(xAccessor(d,i)))
             .attr('cy',(d,i)=>yScale(yAccessor(i)))
-            .attr('fill',(d,i)=>d3.interpolatePurples(i/56))
+            .attr('fill',(d,i)=>d3.interpolatePurples(i/dataset.length-1))
             console.log(newData);
         
         })
